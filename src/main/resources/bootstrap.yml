@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: eureka-server
+
+
+---
+spring:
+  profiles: docker
+  cloud:
+    config:
+      uri: http://configserver:8888
