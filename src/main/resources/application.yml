@@ -7,5 +7,6 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
+  numberRegistrySyncRetries: 0
 logging.level.com.netflix.eureka: false
 logging.level.com.netflix.discovery: false

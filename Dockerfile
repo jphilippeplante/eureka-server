@@ -1,9 +1,9 @@
-FROM maven:alpine
-MAINTAINER Jean-Philippe Plante <jean-philippe.plante@desjardins.com>
+FROM java:8
+MAINTAINER jphilippeplante <https://github.com/jphilippeplante>
 
 EXPOSE 8761
 COPY /docker/eureka-server-*.jar /app/
-COPY /scripts /app/scripts
+COPY /docker/wait-for-it.sh /app/scripts/wait-for-it.sh
 WORKDIR /app/
 RUN chmod 777 /app/scripts/wait-for-it.sh
 
